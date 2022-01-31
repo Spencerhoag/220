@@ -1,3 +1,5 @@
+import math
+
 def calc_mean():
     import math
     total_values = eval(input("Enter the values to be entered: "))
@@ -13,13 +15,6 @@ def calc_mean():
     gm = math.pow(gm, 1 / total_values)
     rms = math.sqrt(rms / total_values)
     hm = total_values / hm
-    print("RMS =", rms)
-    print("Harmonic Mean =", hm)
-    print("Geometric Mean =", gm)
-
-
-
-
-
-
-
+    print("RMS =", round(rms, 3))
+    print("Harmonic Mean =", round(hm, 3))
+    print("Geometric Mean =", round(gm, 3))
