@@ -2,7 +2,19 @@
 Name: <Spencer Hoag>
 <hw8>.py
 
-Problem: <>
+Problem: <The first function uses a for loop to iterate through each element in the list and adds 10
+to each element. The second function does the same thing but squares each element in the list. The
+third function uses a for loop to iterate through a list of numbers, but uses an accumulator to
+keep track of every element that's summed in the list. The fourth function uses a for loop to iterate
+through a list of strings and converts each element to a float type, then for each element the function
+checks if that number mod 1 has a remainder, if it doesn't then that number must be an integer, so it gets
+converted using int(), if the number had a remainder it just stays as a float type. The fifth function loops
+through each element in the list and changes each string element to a list, then chains the previous functions
+together to eventually append the sum of the squared numbers to another list and returns that list. The sixth
+and seventh functions return True if the conditional statements are correct, otherwise they return False. The
+last function gets each circle's radius and center points and uses those values to compute to the distance
+between the two centers and also the sum of the two radii, then checks if the distance is less than or equal
+to the sum of the radii and returns True if so.>
 
 Certification of Authenticity:
 <I certify that this assignment is entirely my own work.>
@@ -10,7 +22,7 @@ I certify that this assignment is entirely my own work.
 I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
 import math
-from graphics import *
+from graphics import GraphWin, Circle, Text, Point
 
 
 def add_ten(nums):
@@ -51,25 +63,15 @@ def sum_of_squares(nums):
 
 
 def starter(weight, wins):
-    if 150 <= weight < 160 and wins >= 5 or weight > 199 or wins > 20:
-        return True
-    else:
-        return False
+    return 150 <= weight < 160 and wins >= 5 or weight > 199 or wins > 20
 
 
 def leap_year(year):
-    if year % 4 == 0 and year % 100 != 0:
-        return True
-    if year % 4 == 0 and year % 100 == 0 and year % 400 == 0:
-        return True
-    else:
-        return False
+    return year % 4 == 0 and year % 100 != 0 or year % 4 == 0 and year % 100 == 0 and year % 400 == 0
 
 
 def circle_overlap():
-    width_px = 700
-    height_px = 700
-    win = GraphWin("Circle", width_px, height_px)
+    win = GraphWin("Circle", 700, 700)
     width = 10
     height = 10
     win.setCoords(0, 0, width, height)
@@ -112,11 +114,8 @@ def did_overlap(circle_one, circle_two):
     radius2 = circle_two.getRadius()
     dist = math.sqrt((center2x - center1x) ** 2 + (center2y - center1y) ** 2)
     radsum = radius1 + radius2
-    if dist >= radsum:
-        return True
-    else:
-        return False
+    return dist <= radsum
 
 
 if __name__ == '__main__':
-    sum_of_squares(["1, 4.5, 2"])
+    pass
