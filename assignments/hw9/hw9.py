@@ -71,6 +71,7 @@ def play_graphics(secret_word):
         letter = letter_input.getText()
         if not already_guessed(letter, guesses) and letter_in_secret_word(letter, secret_word):
             guesses.append(letter)
+            hidden_word = make_hidden_secret(secret_word, guesses)
         elif already_guessed(letter, guesses):
             pass
         else:
@@ -118,6 +119,7 @@ def play_command_line(secret_word):
         letter = input("Guess a Letter: ")
         if not already_guessed(letter, guesses) and letter_in_secret_word(letter, secret_word):
             guesses.append(letter)
+            hidden_word = make_hidden_secret(secret_word, guesses)
         elif already_guessed(letter, guesses):
             pass
         else:
