@@ -47,18 +47,6 @@ def syracuse(n):
     return total
 
 
-def primes(n):
-    i = 2
-    mylist = []
-    while i < n:
-        if i % n == 0:
-            i = i + 1
-        else:
-            mylist.append(i)
-            i = i + 1
-    return mylist
-
-
 def goldbach(n):
     if n % 2 != 0:
         return None
