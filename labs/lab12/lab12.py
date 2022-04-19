@@ -29,7 +29,6 @@ def num_digits():
 
 def hi_lo_game():
     ran_num = randint(1, 100)
-    print(ran_num)
     i = 1
     while i < 8:
         guess = eval(input("Enter a number to guess: "))
